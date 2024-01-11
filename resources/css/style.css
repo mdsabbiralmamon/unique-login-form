@@ -6,3 +6,53 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    margin-top: 200px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #06181f;
+}
+
+/* ======================================
+            Header CSS
+====================================== */
+
+header path {
+    fill: transparent;
+    stroke: 10;
+    stroke: #31e8ff;
+}
+
+/* change values of array and offset to create a starting point from where you want to start your animation */
+
+header path {
+    stroke-dasharray: 2400;
+    stroke-dashoffset: 2400;
+}
+
+/* hover animation effect creation */
+
+header .logInToSameon:hover path{
+    animation: animate-Sameon 10s linear forwards;
+}
+
+@keyframes animate-Sameon{
+    0% {
+        stroke-dashoffset: 2400;
+    }
+    40% {
+        stroke-dashoffset: -2400; /*same value from the path creation*/
+    }
+    80% {
+        stroke-dashoffset: -4800;  /*double the value you selected before effect creation*/
+        fill: transparent;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #31e8ff;
+    }
+}
+/* ======================================
+            Main CSS
+====================================== */
